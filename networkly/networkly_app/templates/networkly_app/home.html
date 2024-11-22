@@ -3,5 +3,15 @@
 {% block content %}
 
 <h3>Inicio</h3>
+{% if request.user.is_authenticated %}
+    <hr>
+    <h4>
+        {{user.username | upper }}
+    </h4>
+{%endif%}
+
+<hr>
+
+
 
 {% endblock %}
